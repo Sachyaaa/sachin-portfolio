@@ -3,6 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import React from 'react'
 import { lightGreen } from '@mui/material/colors';
 import SwipeableTemporaryDrawer from './SwipeableTemporaryDrawer';
+import logo from '../images/logo.png';
 
 export default function Navbar() {
     return (
@@ -11,15 +12,15 @@ export default function Navbar() {
                 <Box sx={{ flexGrow: 1 }} >
                     <AppBar position="static" elevation={0}>
                         <Toolbar >
-                            <Grid container spacing={2} display="flex" alignItems="center">
-                                <Grid item  md={5.5} xs={10} justifySelf="start">
-                                    <Typography color={'secondary'} fontFamily={'Courgette'} variant="h5" component="div" sx={{ flexGrow: 1 }}>
-                                        SACHIN
-                                    </Typography>
+                            <Grid container spacing={1} display="flex" alignItems="center">
+                                <Grid item  md={6} xs={10} justifySelf="start">
+                                    <img src={logo} alt='sachin' style={{
+                                        width:80, height:20
+                                    }}/>
                                 </Grid>
                                 <Hidden mdDown>
                                     <Grid item md={1}>
-                                        <Typography variant="subtitle" component="div" sx={{ flexGrow: 1 }}>
+                                        <Typography fontFamily={'Roboto'} variant="subtitle" component="div" sx={{ flexGrow: 1 }}>
                                             Home
                                         </Typography>
                                     </Grid>
@@ -45,7 +46,7 @@ export default function Navbar() {
                                         </Typography>
                                     </Grid>
                                 
-                                <Grid item md={1.5} >
+                                <Grid item md={1} >
                                     <Button varient="contained" style={{ backgroundColor: "green" }}>Contact</Button>
                                 </Grid>
                                 </Hidden>

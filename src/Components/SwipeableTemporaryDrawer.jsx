@@ -12,6 +12,8 @@ import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import LocalActivityRoundedIcon from '@mui/icons-material/LocalActivityRounded';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import ListItemText from '@mui/material/ListItemText';
+import logo from '../images/logo.png';
+
 
 
 import MenuIcon from '@mui/icons-material/Menu';
@@ -46,10 +48,10 @@ export default function SwipeableTemporaryDrawer() {
     >
       <List>
         <ListItem>
-          
-        <Typography fontFamily={'Courgette'} color='secondary'  variant="h5" component="div" sx={{ flexGrow: 1 }}>
-          SACHIN
-        </Typography>
+
+          <img src={logo} alt='sachin' style={{
+            width: 80, height: 20
+          }} />
         </ListItem>
         <ListItem key={'Home'} disablePadding>
           <ListItemButton>

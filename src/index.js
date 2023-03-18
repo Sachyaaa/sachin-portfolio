@@ -11,16 +11,23 @@ import roboto from '@fontsource/roboto'
 import { createTheme, ThemeProvider } from '@mui/material';
 
 const theme = createTheme({
-
+  typography: {
+    allVariants: {
+      fontFamily: 'Roboto',
+    },
+    h6:{
+      fontFamily: 'Courgette'
+    }
+  },
   palette: {
     primary: {
       main: "#ffffff"
     },
     secondary: {
-      main: "#FF6700" //Another orange-ish color
+      main: "#FF6700" 
     },
     ter: {
-      main: "#000000" //Another orange-ish color
+      main: "#000000" 
     }
   },
   fontFamily: roboto
@@ -31,7 +38,7 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <App />
-    </ThemeProvider>,
+    </ThemeProvider>
   </React.StrictMode>
 );
 
