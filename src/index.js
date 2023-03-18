@@ -3,11 +3,35 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import roboto from '@fontsource/roboto'
+import { createTheme, ThemeProvider } from '@mui/material';
+
+const theme = createTheme({
+
+  palette: {
+    primary: {
+      main: "#ffffff"
+    },
+    secondary: {
+      main: "#FF6700" //Another orange-ish color
+    },
+    ter: {
+      main: "#000000" //Another orange-ish color
+    }
+  },
+  fontFamily: roboto
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>,
   </React.StrictMode>
 );
 
